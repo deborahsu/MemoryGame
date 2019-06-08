@@ -1,0 +1,70 @@
+body {
+    margin:0px;
+    padding:0;
+    height:100vh;
+    width:100vw; 
+    font-family:'Oswald', sans-serif;
+    background-color:#adcae6;
+    background-image:url("../images/abstract_color_background.jpg");
+    background-repeat:no-repeat;
+    background-size:cover;
+   
+}
+
+.container {
+    width:90vw;
+    height:auto; 
+    margin:6%;
+    display:flex;
+    flex-direction: column;
+    padding:20px;
+}
+
+.card {
+    height: 200px;
+    width: 150px;
+    margin: 10px;
+    box-shadow:10px 10px 10px crimson;
+    background-image:url("https://media.giphy.com/media/uHEqSttWHv476/giphy.gif");
+    background-size:cover;
+    background-repeat:no-repeat;
+    background-position:center;
+    border-radius:5%;
+}
+
+.card:hover{
+    cursor:pointer;
+    border:5px solid crimson;
+}
+
+h1 {
+    font-size:55px;
+    font-family:'Oswald', sans-serif;
+    text-align: center;
+    color: crimson;
+}
+
+button {
+    background-color: crimson;
+    text-align: center;
+    color: white;
+    font-size:25px;
+    font-family:'Oswald', sans-serif;
+    margin-left:43%;
+    margin-top:5%;
+    position:relative;
+    height:80px;
+    width:200px;
+    border-radius:25px;
+}
+
+img{
+    height: 200px;
+    width: 150px;
+    border-radius:5%;
+}
+.winpic{
+    background-image:url("https://media.giphy.com/media/kolvlRnXh8Jj2/giphy.gif");
+    background-size:cover;
+    background-repeat:no-repeat;
+}
