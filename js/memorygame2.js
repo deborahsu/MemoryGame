@@ -5,9 +5,7 @@ $(document).ready(function () {
             game.assignCard();
 
         },
-        selectCard: function () {
-
-        },
+       
         cards: [1, 1, 2, 2, 3, 3, 4, 4, 5, 5, 6, 6],
 
         shuffleCards: function () {
@@ -20,11 +18,11 @@ $(document).ready(function () {
                 game.cards[randomIndex] = temporaryIndex;
 
             }
-            console.log(game.cards);
+            
         },
         assignCard: function () {
             $(".card").each(function (index) {
-                $(this).attr('data-card-value', game.cards[index]);
+                $(this).data('cardValue', game.cards[index]);
             });
             game.selectCard();
 
@@ -37,7 +35,6 @@ $(document).ready(function () {
                 if($('.selected').length<2){
                 $(this).html('<img src=./images/' + $(this).data('cardValue') + '.jpeg>');
                 $(this).addClass("selected");
-                console.log($('.selected').length);
                 game.checkMatch();
                 }    
             });
@@ -50,7 +47,6 @@ $(document).ready(function () {
                 if ($('.selected').first().data('cardValue') == $('.selected').last().data('cardValue')) {
                     $('.selected').each(function () {
                         $(this).animate({ opacity: 0 }).removeClass('selected unflipped');
-                        console.log("unflipped remaining: " + $('.unflipped').length);
                         game.checkWin();
                     
                     });
@@ -58,7 +54,6 @@ $(document).ready(function () {
                     setTimeout(function(){
                         $(".selected").each(function(){
                             $(this).html('').removeClass('selected');
-                            console.log("cards flipped");
                             });
                         },1000);
                 }
@@ -69,7 +64,6 @@ $(document).ready(function () {
     checkWin: function(){
         if ($('.unflipped').length===0){
             $('.container').html('<h1>You win!</h1>');
-            console.log('you win');
             $('body').append('<div></div>').addClass("winpic");
         }
 
@@ -84,7 +78,6 @@ $(document).ready(function () {
         game.start();
     });
 });
-
 
 
 
